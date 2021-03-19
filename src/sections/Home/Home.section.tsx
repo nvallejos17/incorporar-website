@@ -2,7 +2,9 @@ import { HomeWrapper } from './Home.styled';
 
 const Home = () => (
   <HomeWrapper>
-    <h2>Home</h2>
+    <i className='fas fa-star-of-david'></i>
+    <h2>Incorporar</h2>
+    <p>Educación corporal</p>
   </HomeWrapper>
 );
 
