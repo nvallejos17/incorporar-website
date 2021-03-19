@@ -8,7 +8,7 @@ import Section from './components/Section/Section.component';
 const App = () => (
   <ThemeProvider theme={baseTheme}>
     <Navbar />
-    <Section title='Section title' alignTitle='right'>
+    <Section>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio
         tempora necessitatibus accusantium exercitationem deleniti quidem illum

@@ -1,28 +1,14 @@
 import { ReactNode } from 'react';
-import {
-  SectionWrapper,
-  SectionTitle,
-  SectionContainer,
-} from './Section.styled';
+import { SectionWrapper, SectionContainer } from './Section.styled';
 
 interface ISection {
-  title?: string;
-  alignTitle?: 'left' | 'center' | 'right';
   children: ReactNode;
 }
 
-const Section = ({
-  title,
-  alignTitle = 'left',
-  children,
-  ...props
-}: ISection) => {
+const Section = ({ children, ...props }: ISection) => {
   return (
     <SectionWrapper {...props}>
-      <SectionContainer>
-        {title && <SectionTitle alignTitle={alignTitle}>{title}</SectionTitle>}
-        {children}
-      </SectionContainer>
+      <SectionContainer>{children}</SectionContainer>
     </SectionWrapper>
   );
 };
