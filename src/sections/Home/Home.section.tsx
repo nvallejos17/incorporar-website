@@ -1,8 +1,8 @@
 import { HomeContainer, HomeLogo, HomeTitle, HomeWrapper } from './Home.styled';
 
-const Home = () => {
+const Home = ({ ...props }) => {
   return (
-    <HomeWrapper>
+    <HomeWrapper {...props}>
       <HomeContainer>
         <HomeLogo />
         <HomeTitle>Incorporar</HomeTitle>

@@ -1,30 +1,24 @@
 import styled, { css } from 'styled-components';
-import Section from '../../components/Section/Section.component';
+import Container from '../../components/Container/Container.component';
 
-export const HomeWrapper = styled(Section)`
-  height: calc(100vh - 96px);
-  padding: 2rem;
-  padding-top: 0;
+export const HomeWrapper = styled.section`
+  min-height: calc(100vh - 96px);
 `;
 
-export const HomeContainer = styled.div(
-  ({ theme }) => css`
-    height: 100%;
-    padding: 0 2rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  `
-);
+export const HomeContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const HomeLogo = styled.div(
   ({ theme }) => css`
     width: 150px;
     height: 150px;
 
-    margin-bottom: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
 
     border: 2px solid ${theme.colors.primary};
     border-radius: 50%;
