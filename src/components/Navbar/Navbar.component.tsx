@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
-import { NavbarWrapper } from './Navbar.styled';
+import {
+  NavbarWrapper,
+  NavbarBrand,
+  NavbarNav,
+  NavLink,
+} from './Navbar.styled';
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(window.scrollY);
@@ -10,7 +15,25 @@ const Navbar = () => {
     return () => window.addEventListener('scroll', onScroll);
   }, [scrollTop]);
 
-  return <NavbarWrapper hasScrolled={scrollTop > 0} />;
+  return (
+    <NavbarWrapper hasScrolled={scrollTop > 0}>
+      <NavbarBrand>Incorporar</NavbarBrand>
+      <NavbarNav>
+        <NavLink>
+          <i className='fas fa-home' />
+          Inicio
+        </NavLink>
+        <NavLink>
+          <i className='fas fa-leaf' />
+          ¿Qué hacemos?
+        </NavLink>
+        <NavLink>
+          <i className='fas fa-at' />
+          Contacto
+        </NavLink>
+      </NavbarNav>
+    </NavbarWrapper>
+  );
 };
 
 export default Navbar;
