@@ -25,7 +25,7 @@ export const NavbarWrapper = styled.nav<INavbarWrapper>(
     ${hasScrolled &&
     css`
       background: ${theme.colors.light};
-      border-color: ${theme.colors.primary};
+      border-color: ${theme.colors.tint};
     `};
   `
 );
@@ -52,11 +52,13 @@ export const NavLink = styled.li(
     text-transform: uppercase;
     color: ${theme.colors.shade};
 
-    transition: color 0.5s ease;
-
     i {
-      margin-right: 0.25rem;
+      margin-right: 0.5rem;
       font-size: inherit;
+
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
     }
 
     &:last-child {
@@ -65,7 +67,10 @@ export const NavLink = styled.li(
 
     &:hover {
       cursor: pointer;
-      color: ${theme.colors.tint};
+
+      i {
+        opacity: 1;
+      }
     }
   `
 );
