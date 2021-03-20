@@ -16,8 +16,6 @@ export const HomeContainer = styled.div(
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    border: 2px solid ${theme.colors.primary};
   `
 );
 
@@ -30,6 +28,7 @@ export const HomeLogo = styled.div(
 
     border: 2px solid ${theme.colors.primary};
     border-radius: 50%;
+    background: ${theme.colors.primary};
   `
 );
 

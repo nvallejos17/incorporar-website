@@ -18,12 +18,12 @@ export const NavbarWrapper = styled.nav<INavbarWrapper>(
     justify-content: space-between;
     align-items: center;
 
-    transition: height 0.5s ease, background 0.5s ease;
+    transition: height 0.5s ease, background 0.5s ease, border 0.5s ease;
 
     ${hasScrolled &&
     css`
       background: ${theme.colors.light};
-      box-shadow: 0 2px 4px ${theme.colors.light};
+      border-bottom: 2px solid ${theme.colors.primary};
     `};
   `
 );
