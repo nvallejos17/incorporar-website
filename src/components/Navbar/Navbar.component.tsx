@@ -16,7 +16,7 @@ const Navbar = () => {
   }, [scrollTop]);
 
   return (
-    <NavbarWrapper hasScrolled={scrollTop > 0}>
+    <NavbarWrapper hasScrolled={scrollTop > 64}>
       <NavbarBrand>Incorporar</NavbarBrand>
       <NavbarNav>
         <NavLink>

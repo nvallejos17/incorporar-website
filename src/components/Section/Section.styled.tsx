@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionWrapper = styled.section`
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 64px);
 `;
 
 export const SectionContainer = styled.div`
