@@ -11,6 +11,8 @@ export const NavbarWrapper = styled.nav<INavbarWrapper>(
     position: sticky;
     top: 0;
 
-    background: ${theme.colors.primary};
+    border-bottom: 1px solid ${theme.colors.primary};
+
+    transition: height 0.5s ease;
   `
 );

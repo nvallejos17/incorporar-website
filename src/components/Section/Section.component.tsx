@@ -1,16 +1,12 @@
 import { ReactNode } from 'react';
-import { SectionWrapper, SectionContainer } from './Section.styled';
+import { SectionWrapper } from './Section.styled';
 
 interface ISection {
   children: ReactNode;
 }
 
-const Section = ({ children, ...props }: ISection) => {
-  return (
-    <SectionWrapper {...props}>
-      <SectionContainer>{children}</SectionContainer>
-    </SectionWrapper>
-  );
-};
+const Section = ({ children, ...props }: ISection) => (
+  <SectionWrapper {...props}>{children}</SectionWrapper>
+);
 
 export default Section;
