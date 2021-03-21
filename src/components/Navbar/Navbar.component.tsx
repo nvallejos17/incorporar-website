@@ -24,7 +24,7 @@ const Navbar = () => {
           Inicio
         </NavLink>
         <NavLink>
-          <i className='fas fa-leaf' />
+          <i className='fas fa-video' />
           ¿Qué hacemos?
         </NavLink>
         <NavLink>
