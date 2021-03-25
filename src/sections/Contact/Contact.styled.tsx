@@ -3,19 +3,18 @@ import Container from '../../components/Container/Container.component';
 
 export const ContactWrapper = styled.section(
   ({ theme }) => css`
-    /* min-height: calc(100vh - 64px); */
     background: ${theme.colors.light};
   `
 );
 
 export const ContactContainer = styled(Container)`
+  max-width: 480px;
+
   padding: 4rem 2rem;
 `;
 
 export const ContactItem = styled.a(
   ({ theme }) => css`
-    max-width: 480px;
-
     margin: 0 auto 1rem;
     padding: 1rem;
 
