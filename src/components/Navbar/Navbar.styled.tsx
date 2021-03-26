@@ -74,3 +74,12 @@ export const NavLink = styled.li(
     }
   `
 );
+
+export const MobileNavToggler = styled.i(
+  ({ theme }) => css`
+    font-size: 2rem;
+    color: ${theme.colors.shade};
+
+    cursor: pointer;
+  `
+);
