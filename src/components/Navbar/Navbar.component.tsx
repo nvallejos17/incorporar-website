@@ -39,7 +39,10 @@ const Navbar = () => {
   };
 
   const scrollTo = (id: string) => {
-    scroller.scrollTo(id, { ...scrollOptions, offset: -64 });
+    scroller.scrollTo(id, {
+      ...scrollOptions,
+      offset: scrollTop > 64 ? -64 : -96,
+    });
     setMobileNav(false);
   };
 
