@@ -1,31 +1,19 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Container from '../../components/Container/Container.component';
 
 export const HomeWrapper = styled.section`
   min-height: calc(100vh - 96px);
 `;
 
-export const HomeContainer = styled(Container)``;
+export const HomeContainer = styled(Container)`
+  max-width: 480px;
+  padding: 2rem 0 0;
+`;
 
-export const HomeLogo = styled.div(
-  ({ theme }) => css`
-    width: 150px;
-    height: 150px;
+export const HomeBrand = styled.img`
+  width: 100%;
 
-    margin: 6rem auto 1.5rem;
+  margin: 0 auto;
 
-    border: 2px solid ${theme.colors.primary};
-    border-radius: 50%;
-    background: ${theme.colors.primary};
-  `
-);
-
-export const HomeTitle = styled.h2(
-  ({ theme }) => css`
-    font-size: 2.25rem;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    color: ${theme.colors.shade};
-  `
-);
+  display: block;
+`;

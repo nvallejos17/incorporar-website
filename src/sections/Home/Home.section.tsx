@@ -1,11 +1,10 @@
-import { HomeContainer, HomeLogo, HomeTitle, HomeWrapper } from './Home.styled';
+import { HomeBrand, HomeContainer, HomeWrapper } from './Home.styled';
 
 const Home = ({ ...props }) => {
   return (
     <HomeWrapper {...props}>
       <HomeContainer>
-        <HomeLogo />
-        <HomeTitle>Incorporar</HomeTitle>
+        <HomeBrand src='/incorporar.png' alt='' />
       </HomeContainer>
     </HomeWrapper>
   );
