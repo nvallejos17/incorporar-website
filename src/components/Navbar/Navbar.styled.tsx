@@ -45,7 +45,7 @@ export const NavbarNav = styled.ul`
   align-items: center;
 `;
 
-export const NavLink = styled.a(
+export const NavLink = styled.li(
   ({ theme }) => css`
     margin: 0 1rem;
 
@@ -106,7 +106,7 @@ export const MobileNav = styled.ul<IMobileNav>(
   `
 );
 
-export const MobileNavLink = styled.a(
+export const MobileNavLink = styled.li(
   ({ theme }) => css`
     padding: 1rem;
 
@@ -115,5 +115,9 @@ export const MobileNavLink = styled.a(
     text-align: center;
     text-transform: uppercase;
     color: ${theme.colors.shade};
+
+    &:hover {
+      cursor: pointer;
+    }
   `
 );

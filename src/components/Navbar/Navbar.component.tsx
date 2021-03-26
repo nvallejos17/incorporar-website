@@ -8,6 +8,7 @@ import {
   MobileNav,
   MobileNavLink,
 } from './Navbar.styled';
+import { scroller, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(window.scrollY);
@@ -28,21 +29,35 @@ const Navbar = () => {
 
   const toggleMenu = () => setMobileNav(!mobileNav);
 
+  const scrollOptions = {
+    duration: 0,
+  };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop(scrollOptions);
+    setMobileNav(false);
+  };
+
+  const scrollTo = (id: string) => {
+    scroller.scrollTo(id, { ...scrollOptions, offset: -64 });
+    setMobileNav(false);
+  };
+
   return (
     <NavbarWrapper hasScrolled={scrollTop > 64}>
       <NavbarBrand>Incorporar</NavbarBrand>
 
       {innerWidth >= 768 ? (
         <NavbarNav>
-          <NavLink href='#'>
+          <NavLink onClick={scrollToTop}>
             <i className='fas fa-home' />
             Inicio
           </NavLink>
-          <NavLink href='#about'>
+          <NavLink onClick={() => scrollTo('about')}>
             <i className='fas fa-video' />
             ¿Qué hacemos?
           </NavLink>
-          <NavLink href='#contact'>
+          <NavLink onClick={() => scrollTo('contact')}>
             <i className='fas fa-at' />
             Contacto
           </NavLink>
@@ -56,9 +71,13 @@ const Navbar = () => {
 
           {mobileNav && (
             <MobileNav hasScrolled={scrollTop > 64}>
-              <MobileNavLink href='#'>Inicio</MobileNavLink>
-              <MobileNavLink href='#about'>¿Qué hacemos?</MobileNavLink>
-              <MobileNavLink href='#contact'>Contacto</MobileNavLink>
+              <MobileNavLink onClick={scrollToTop}>Inicio</MobileNavLink>
+              <MobileNavLink onClick={() => scrollTo('about')}>
+                ¿Qué hacemos?
+              </MobileNavLink>
+              <MobileNavLink onClick={() => scrollTo('contact')}>
+                Contacto
+              </MobileNavLink>
             </MobileNav>
           )}
         </>
