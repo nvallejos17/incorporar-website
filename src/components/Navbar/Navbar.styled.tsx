@@ -45,7 +45,7 @@ export const NavbarNav = styled.ul`
   align-items: center;
 `;
 
-export const NavLink = styled.li(
+export const NavLink = styled.a(
   ({ theme }) => css`
     margin: 0 1rem;
 
@@ -81,5 +81,39 @@ export const MobileNavToggler = styled.i(
     color: ${theme.colors.shade};
 
     cursor: pointer;
+  `
+);
+
+interface IMobileNav {
+  hasScrolled: boolean;
+}
+
+export const MobileNav = styled.ul<IMobileNav>(
+  ({ theme, hasScrolled }) => css`
+    width: 100%;
+
+    position: fixed;
+    top: ${hasScrolled ? 64 : 96}px;
+    right: 0;
+    z-index: 1;
+
+    list-style: none;
+
+    background: ${hasScrolled ? theme.colors.light : 'white'};
+    border-bottom: 2px solid ${theme.colors.tint};
+
+    transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  `
+);
+
+export const MobileNavLink = styled.a(
+  ({ theme }) => css`
+    padding: 1rem;
+
+    display: block;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: ${theme.colors.shade};
   `
 );
