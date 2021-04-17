@@ -29,18 +29,14 @@ const Navbar = () => {
 
   const toggleMenu = () => setMobileNav(!mobileNav);
 
-  const scrollOptions = {
-    duration: 0,
-  };
-
   const scrollToTop = () => {
-    scroll.scrollToTop(scrollOptions);
+    scroll.scrollToTop();
     setMobileNav(false);
   };
 
   const scrollTo = (id: string) => {
     scroller.scrollTo(id, {
-      ...scrollOptions,
+      smooth: true,
       offset: scrollTop > 64 ? -64 : -96,
     });
     setMobileNav(false);
