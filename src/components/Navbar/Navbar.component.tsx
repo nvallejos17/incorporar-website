@@ -18,13 +18,13 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => setScrollTop(window.scrollY);
     window.addEventListener('scroll', onScroll);
-    return () => window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
     const onResize = () => setInnerWidth(window.innerWidth);
     window.addEventListener('resize', onResize);
-    return () => window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   const toggleMenu = () => setMobileNav(!mobileNav);
